@@ -17,7 +17,7 @@ export const Home = observer(() => {
     <Container maxW='7xl' p={5}>
       <Box>
         <Center>
-          <Heading>IoTeX Defi</Heading>
+          <Heading>IoTeX DeFi</Heading>
         </Center>
       </Box>
       <Box h='40px' mt={6}>
