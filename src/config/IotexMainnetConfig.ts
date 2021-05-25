@@ -2,10 +2,10 @@ import { TokenState } from '@/store/lib/TokenState';
 import { ChainState } from '../store/lib/ChainState';
 
 export const IotexMainnetConfig = new ChainState({
-  name: 'Iotex',
+  name: 'IoTeX',
   chainId: 4689,
   rpcUrl: 'https://api.iotex.one:443',
-  explorerURL: 'https://iotexscan.com',
+  explorerURL: 'https://iotexscan.io',
   explorerName: 'IotexScan',
   info: {
     blockPerSeconds: 5
