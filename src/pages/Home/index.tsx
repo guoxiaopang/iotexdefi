@@ -1,16 +1,16 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { Box, Button, Center, Container, Flex, Heading, Text } from '@chakra-ui/react';
-import { CHAIN_ID, RPC_URL, setupNetwork } from '@/utils/wallet';
+import { CHAIN_ID, EXPLORER_URL, RPC_URL, setupNetwork } from '@/utils/wallet';
 
 export const Home = observer(() => {
 
   const setupMainNetwork=async ()=>{
-    await setupNetwork(CHAIN_ID.MAINNET, RPC_URL.MAINNET)
+    await setupNetwork(CHAIN_ID.MAINNET, RPC_URL.MAINNET,EXPLORER_URL.MAINNET)
   }
 
   const setupTestNetwork= async ()=>{
-    await setupNetwork(CHAIN_ID.TESTNET, RPC_URL.TESTNET)
+    await setupNetwork(CHAIN_ID.TESTNET, RPC_URL.TESTNET,EXPLORER_URL.TESTNET)
   }
 
   return (

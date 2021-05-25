@@ -1,15 +1,21 @@
 
+
 export enum CHAIN_ID {
   'MAINNET' = 4689,
   'TESTNET' = 4690
 }
 
 export enum RPC_URL {
-  'MAINNET' = 'https://babel-api.mainnet.iotex.io',
+  'MAINNET' = 'https://babel-api.mainnet.iotex.io/',
   'TESTNET' = 'https://babel-api.testnet.iotex.io/'
 }
 
-export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL) => {
+export enum EXPLORER_URL{
+  'MAINNET'='https://iotexscan.io/',
+  'TESTNET' = 'https://testnet.iotex.io/'
+}
+
+export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL,explorerUrl) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const provider = window.ethereum
@@ -27,7 +33,7 @@ export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL) => {
               decimals: 18,
             },
             rpcUrls: [rpcUrl],
-            blockExplorerUrls: ['https://bscscan.com/'],
+            blockExplorerUrls: [explorerUrl],
           },
         ],
       })
