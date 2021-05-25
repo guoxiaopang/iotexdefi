@@ -26,6 +26,7 @@ export const TokenListModal = observer((props: PropsType) => {
       props.onClose();
     },
     onSelect(item: TokenState) {
+      console.log('item',item)
       props.onSelect(item);
       props.onClose();
     }

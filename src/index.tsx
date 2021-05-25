@@ -44,7 +44,7 @@ export const App = observer(() => {
           <ETHProvider />
           <Toaster />
           <Router>
-            <Header />
+            {/*<Header />*/}
             <Switch>
               <Route path="/" exact>
                 <Home key={god.network.currentId.value} />

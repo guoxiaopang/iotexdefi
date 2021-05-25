@@ -1,30 +1,42 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Box, Container, LinkBox, SimpleGrid, Heading, LinkOverlay, Stack } from '@chakra-ui/react';
-import { ToolConfig } from '../../config/ToolConfig';
-import { Badge, Text } from '@chakra-ui/layout';
+import { Box, Button, Center, Container, Flex, Heading, Text } from '@chakra-ui/react';
+import { CHAIN_ID, RPC_URL, setupNetwork } from '@/utils/wallet';
 
 export const Home = observer(() => {
+
+  const setupMainNetwork=async ()=>{
+    await setupNetwork(CHAIN_ID.MAINNET, RPC_URL.MAINNET)
+  }
+
+  const setupTestNetwork= async ()=>{
+    await setupNetwork(CHAIN_ID.TESTNET, RPC_URL.TESTNET)
+  }
+
   return (
-    <Container maxW="7xl">
-      <SimpleGrid minChildWidth="200px" spacing="10px" py="6">
-        {ToolConfig.map((i) => (
-          <LinkBox as="article" w="200px" p="4" borderWidth="1px" rounded="md" key={i.name}>
-            <LinkOverlay href={i.path} target="__blank">
-              <Text>{i.name}</Text>
-            </LinkOverlay>
-            {i.tags && (
-              <Stack direction="row" mt="2">
-                {i.tags.map((i) => (
-                  <Badge key={i} variant="outline" colorScheme="green">
-                    {i}
-                  </Badge>
-                ))}
-              </Stack>
-            )}
-          </LinkBox>
-        ))}
-      </SimpleGrid>
+    <Container maxW='7xl' p={5}>
+      <Box>
+        <Center>
+          <Heading>IoTeX Defi List</Heading>
+        </Center>
+      </Box>
+      <Box h='40px' mt={6}>
+        <Text>IoTeX Network</Text>
+      </Box>
+      <Box borderWidth='1px' display={'flex'} flexDirection={'column'} mt={3} minH={500} justifyContent={'center'}
+           borderColor={'black'}>
+        <Box>
+          <Center>
+            <Text size={'18px'} mt={2}>Add IoTex network to Metamask</Text>
+          </Center>
+        </Box>
+        <Box mt={16}>
+          <Flex justifyContent={'space-evenly'}>
+            <Button size={'md'} onClick={setupMainNetwork}>Add Mainnet</Button>
+            <Button size={'md'} onClick={setupTestNetwork}>Add Testnet</Button>
+          </Flex>
+        </Box>
+      </Box>
     </Container>
   );
 });
