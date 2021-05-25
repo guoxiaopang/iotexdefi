@@ -27,7 +27,7 @@ export const Home = observer(() => {
            borderColor={'black'}>
         <Box>
           <Center>
-            <Text size={'18px'} mt={2}>Add IoTex network to Metamask</Text>
+            <Text size={'18px'} mt={2}>Add IoTeX Network to Metamask</Text>
           </Center>
         </Box>
         <Box mt={16}>
