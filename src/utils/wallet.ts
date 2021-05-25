@@ -22,8 +22,8 @@ export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL) => {
             chainId: `0x${chainId.toString(16)}`,
             chainName: 'Binance Smart Chain',
             nativeCurrency: {
-              name: 'BNB',
-              symbol: 'BNB',
+              name: 'IoTeX Network',
+              symbol: 'IOTX',
               decimals: 18,
             },
             rpcUrls: [rpcUrl],
