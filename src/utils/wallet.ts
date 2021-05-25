@@ -1,21 +1,19 @@
-
-
-export enum CHAIN_ID {
-  'MAINNET' = 4689,
-  'TESTNET' = 4690
+export const  NETWORK_CONFIG={
+  'MAINNET':{
+    name:'IoTeX Network',
+    chainId:4689,
+    rpcUrl:'https://babel-api.mainnet.iotex.io/',
+    explorerUrl:'https://iotexscan.io/'
+  },
+  'TESTNET':{
+    name: 'IoTeX Testnet',
+    chainId:4690,
+    rpcUrl:'https://babel-api.testnet.iotex.io',
+    explorerUrl:'https://testnet.iotex.io/'
+  }
 }
 
-export enum RPC_URL {
-  'MAINNET' = 'https://babel-api.mainnet.iotex.io/',
-  'TESTNET' = 'https://babel-api.testnet.iotex.io/'
-}
-
-export enum EXPLORER_URL{
-  'MAINNET'='https://iotexscan.io/',
-  'TESTNET' = 'https://testnet.iotex.io/'
-}
-
-export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL,explorerUrl) => {
+export const setupNetwork = async (config) => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const provider = window.ethereum
@@ -25,15 +23,15 @@ export const setupNetwork = async (chainId:CHAIN_ID,rpcUrl:RPC_URL,explorerUrl) 
         method: 'wallet_addEthereumChain',
         params: [
           {
-            chainId: `0x${chainId.toString(16)}`,
+            chainId: `0x${config.chainId.toString(16)}`,
             chainName: 'Binance Smart Chain',
             nativeCurrency: {
-              name: 'IoTeX Network',
+              name: config.name,
               symbol: 'IOTX',
               decimals: 18,
             },
-            rpcUrls: [rpcUrl],
-            blockExplorerUrls: [explorerUrl],
+            rpcUrls: [config.rpcUrl],
+            blockExplorerUrls: [config.explorerUrl],
           },
         ],
       })
