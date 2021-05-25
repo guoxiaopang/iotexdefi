@@ -1,6 +1,4 @@
 import { makeAutoObservable } from 'mobx';
-import pancakeTokenList from '@/constants/token/pancake-token-list.json';
-import uniswapTokenList from '@/constants/token/uniswap-token-list.json';
 
 import { TokenState } from './lib/TokenState';
 import { RootStore } from './root';
@@ -13,11 +11,6 @@ export class TokenStore {
   tokens: { [key: number]: TokenState[] } = {};
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
-    this.tokens[BSCMainnetConfig.chainId] = pancakeTokenList.tokens.map((i) => new TokenState(i));
-    this.tokens[ETHMainnetConfig.chainId] = uniswapTokenList.tokens
-      .filter((i) => i.chainId == ETHMainnetConfig.chainId)
-      .map((i) => new TokenState(i));
-    this.tokens[ETHKovanConfig.chainId] = uniswapTokenList.tokens.filter((i) => i.chainId == ETHKovanConfig.chainId).map((i) => new TokenState(i));
 
     makeAutoObservable(this, {
       rootStore: false
