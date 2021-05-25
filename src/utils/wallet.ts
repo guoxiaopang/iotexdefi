@@ -1,12 +1,14 @@
 export const  NETWORK_CONFIG={
   'MAINNET':{
-    name:'IoTeX Network',
+    chainName:'IoTeX Network',
+    currencyName:'IOTX',
     chainId:4689,
     rpcUrl:'https://babel-api.mainnet.iotex.io/',
-    explorerUrl:'https://iotexscan.io/'
+    explorerUrl:'https://iotexscan.io/',
   },
   'TESTNET':{
-    name: 'IoTeX Testnet',
+    chainName:'IoTeX Testnet',
+    currencyName: 'IOTX',
     chainId:4690,
     rpcUrl:'https://babel-api.testnet.iotex.io',
     explorerUrl:'https://testnet.iotex.io/'
@@ -24,9 +26,9 @@ export const setupNetwork = async (config) => {
         params: [
           {
             chainId: `0x${config.chainId.toString(16)}`,
-            chainName: 'Binance Smart Chain',
+            chainName: config.chainName,
             nativeCurrency: {
-              name: config.name,
+              name: config.currencyName,
               symbol: 'IOTX',
               decimals: 18,
             },
