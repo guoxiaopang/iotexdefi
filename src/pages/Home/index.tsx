@@ -27,13 +27,13 @@ export const Home = observer(() => {
            borderColor={'black'}>
         <Box>
           <Center>
-            <Text size={'18px'} mt={2}>Add IoTeX Network to Metamask</Text>
+            <Text size={'18px'} mt={2}>Add IoTeX Network to your Metamask/TokenPocket/imToken</Text>
           </Center>
         </Box>
         <Box mt={16}>
           <Flex justifyContent={'space-evenly'}>
-            <Button size={'md'} onClick={setupMainNetwork}>Add Mainnet</Button>
-            <Button size={'md'} onClick={setupTestNetwork}>Add Testnet</Button>
+            <Button size={'md'} onClick={setupMainNetwork}>Add IoTeX Network</Button>
+            <Button size={'md'} onClick={setupTestNetwork}>Add IoTeX Testnet</Button>
           </Flex>
         </Box>
       </Box>
