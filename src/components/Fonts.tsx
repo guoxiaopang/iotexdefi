@@ -6,17 +6,15 @@ import IBMPlexSansRegular from '../assets/fonts/IBMPlexSans-Regular.ttf';
 const Fonts = () => (
   <Global
     styles={`
-      /* IBMPlexSansMedium */
       @font-face {
-        font-family: 'Changa';
+        font-family: 'IBMPlexSansMedium';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
         src: url('${IBMPlexSansMedium}') format('truetype');
       }
-      /* IBMPlexSansRegular */
       @font-face {
-        font-family: 'ChangaRegular';
+        font-family: 'IBMPlexSansRegular';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
