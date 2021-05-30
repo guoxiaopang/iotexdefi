@@ -8,7 +8,7 @@ const Fonts = () => (
     styles={`
       /* IBMPlexSansMedium */
       @font-face {
-        font-family: 'Changa';
+        font-family: 'IBMPlexSansMedium';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
@@ -16,7 +16,7 @@ const Fonts = () => (
       }
       /* IBMPlexSansRegular */
       @font-face {
-        font-family: 'ChangaRegular';
+        font-family: 'IBMPlexSansRegular';
         font-style: normal;
         font-weight: 400;
         font-display: swap;
