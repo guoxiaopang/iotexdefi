@@ -1,3 +1,23 @@
 {
-  "hello": "你好 ${msg}"
+  "hello": "你好 ${msg}",
+  "wrong.network": "Wrong Network",
+  "connect.wallet": "Connect Wallet",
+  "address.copied": "The address is copied.",
+  "invalid.input": "Invalid Input",
+  "submit": "Submit",
+  "iotex_network": "IoTeX Network",
+  "home_title": "IoTeX DeFi List",
+  "home_desc": "Add IoTeX Network to MetaMask",
+  "add_network": "Add Mainnet",
+  "add_testnet": "Add Testnet",
+  "add_iotx": "Add IOTX",
+  "add_metx": "Add METX",
+  "add_sdi": "Add SDI",
+  "add_cyc": "Add CYC",
+  "add_vita": "Add VITA",
+  "add_up": "Add UP",
+  "maskplus": "Mask+",
+  "mimo": "mimo",
+  "ioTube": "ioTube",
+  "earn_iotx": "Earn IOTX"
 }
