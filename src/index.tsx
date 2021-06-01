@@ -14,6 +14,7 @@ import { Box, Text } from '@chakra-ui/layout';
 import { Toaster } from 'react-hot-toast';
 import { ToolConfig } from './config/ToolConfig';
 import { WalletSelecter } from './components/WalletSelecter/index';
+import Fonts from "./components/Fonts"
 
 const ErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
@@ -37,6 +38,7 @@ export const App = observer(() => {
 
   return (
     <ChakraProvider theme={theme}>
+      <Fonts />
       <CSSReset />
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Web3ReactProvider getLibrary={getLibrary}>
@@ -44,7 +46,7 @@ export const App = observer(() => {
           <ETHProvider />
           <Toaster />
           <Router>
-            {/*<Header />*/}
+            <Header />
             <Switch>
               <Route path="/" exact>
                 <Home key={god.network.currentId.value} />
