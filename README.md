@@ -13,6 +13,8 @@ A list of all tools
 - IOTX on ETH
 
 
+If you are interested to contribute, please contact me tg: @qevanguo twitter @qevanguo.
+
 
 
 ## framework
@@ -63,6 +65,3 @@ After the successfull installation of the packages: `yarn start`
 
 You can build tests with Cypress. I wrote a small test to see if it's enabled. You can run it with `yarn test`
 
-## Contact
-
-Feel free to contact me on [Twitter](https://twitter.com/dieman_) or [Discord](https://discordapp.com/users/160512379510194187)
