@@ -19,5 +19,8 @@
   "maskplus": "Mask+",
   "mimo": "mimo",
   "ioTube": "ioTube",
-  "earn_iotx": "Earn IOTX"
+  "earn_iotx": "Earn IOTX",
+  "iopay": "ioPay",
+  "home_enable_discover": "Enable discover",
+  "home_disable_discover": "Disable discover"
 }

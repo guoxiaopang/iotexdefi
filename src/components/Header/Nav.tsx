@@ -10,7 +10,8 @@ export const links = [
   // { label: 'maskplus', href: '#' },
   { label: 'mimo', href: 'http://mimo.finance/' },
   { label: 'ioTube', href: 'https://tube.iotex.io/' },
-  { label: 'earn_iotx', href: 'https://member.iotex.io/' }
+  { label: 'earn_iotx', href: 'https://member.iotex.io/' },
+  { label: 'iopay', href: '/iopay' }
 ];
 
 export const Nav = observer((props: BoxProps) => {

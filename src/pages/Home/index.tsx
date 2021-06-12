@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Box, Button, Center, Container, Flex, Heading, Text, Image, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, Center, Container, Flex, Heading, Text, Image, useMediaQuery, Link } from '@chakra-ui/react';
 import { Dash } from '@/components/Dash';
 import { NETWORK_CONFIG, setupNetwork } from '@/utils/wallet';
 import { useStore } from '@/store/index';
