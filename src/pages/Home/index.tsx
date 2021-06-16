@@ -186,9 +186,6 @@ export const Home = observer(() => {
           <Box h="81px" borderTopLeftRadius="30px" borderTopRightRadius="30px" background={`url('${cardHeaderBg}')`} backgroundSize="100% 100%">
             <Flex pt="5" pl="8">
               <Image width="48px" src={iotexLogo} />
-              <Text lineHeight="46px" ml="5" color="#fff" fontSize="22px" fontWeight="700">
-                {lang.t('iopay')}
-              </Text>
             </Flex>
           </Box>
 

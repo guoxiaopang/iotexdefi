@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react-lite';
-import { Box, Button, Center, Container, Flex, Heading, Text, Image, useMediaQuery, Link } from '@chakra-ui/react';
+import { Box, Button, Center, Container, Flex, Heading, Text, Image } from '@chakra-ui/react';
 import { Dash } from '@/components/Dash';
 import { useStore } from '@/store/index';
 import cardHeaderBg from '@/assets/imgs/card_header.png';
@@ -79,7 +79,7 @@ export const Iopay = observer(() => {
             bg="#3DDCCD"
             h="2rem"
             mt="1.5rem"
-            w="10rem"
+            w="12rem"
             onClick={() => {
               window.location.href="iopay://browser_enable"
             }}>
@@ -90,7 +90,8 @@ export const Iopay = observer(() => {
             color="#3DDCCD"
             fontSize="1rem"
             h="2rem"
-            w="10rem"
+            w="12rem"
+            spacing="2rem"
             borderColor="#3DDCCD"
             mt="1.5rem"
             ml={{ base: 0, sm: "1rem" }}
