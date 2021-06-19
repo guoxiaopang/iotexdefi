@@ -197,7 +197,9 @@ export const Home = observer(() => {
               bg="#3DDCCD"
               h="2rem"
               mt="1.5rem"
-              w="10rem"
+              css={{
+                width: "12rem"
+              }}
               onClick={() => {
                 window.location.href="iopay://browser_enable"
               }}>
@@ -208,11 +210,13 @@ export const Home = observer(() => {
               color="#3DDCCD"
               fontSize="1rem"
               h="2rem"
-              w="10rem"
               borderColor="#3DDCCD"
               mt="1.5rem"
               ml={{ base: 0, sm: "1rem" }}
               borderRadius="10rem"
+              css={{
+                width: "12rem"
+              }}
               onClick={() => {
                 window.location.href="iopay://browser_disable"
               }}>
